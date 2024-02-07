@@ -370,7 +370,7 @@ table {
 
 th,
 td {
-  width: 150px;
+  width: 200px;
 }
 
 .s-skills {
@@ -379,7 +379,13 @@ td {
 
 @media all and (max-width: 768px) {
   #tk-logo {
-    max-width: 300px;
+    max-width: 200px;
+  }
+
+  th,
+  td {
+    font-size: var(--f-size-smaller);
+    width: 150px;
   }
 }
 
@@ -390,10 +396,12 @@ td {
     h2 {
       font-size: 18px;
     }
-  }
 
-  #tk-logo {
-    max-width: 200px;
+    th,
+    td {
+      font-size: 0.5rem;
+      width: 30vw;
+    }
   }
 }
 
@@ -487,59 +495,44 @@ header li {
   }
 
   100% {
-    fill: red;
+    fill: rgb(255, 55, 0);
   }
 }
 
 @keyframes color-change-water {
   0% {
-    fill: rgb(155, 254, 254);
+    fill: rgb(0, 191, 255);
   }
 
   50% {
-    fill: aqua;
-  }
-
-  100% {
     fill: rgb(0, 153, 255);
   }
+
+  100% {
+    fill: #535cdf;
+  }
 }
 
-@keyframes color-change-sand {
+
+@keyframes color-change-schrift {
   0% {
-    fill: gold;
+    fill: var(--light-color);
   }
 
   50% {
-    fill: rgb(255, 255, 47);
+    fill: var(--sec-color);
   }
 
   100% {
-    fill: greenyellow;
+    fill: #535cdf;
   }
 }
 
+
 .sun,
-.laptop {
+.disc {
   animation-duration: 2s;
   animation-name: color-change-sun;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-}
-
-.sky {
-  animation-duration: 2s;
-  animation-name: color-change-water;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-}
-
-.sand,
-.bow {
-  animation-duration: 2s;
-  animation-name: color-change-sand;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: linear;
@@ -553,17 +546,15 @@ header li {
   animation-timing-function: linear;
 }
 
-.mountain {
-  fill: rgb(152, 144, 134);
+.schrift,
+.disc {
+  animation-duration: 2s;
+  animation-name: color-change-schrift;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
 }
 
-.surfer {
-  fill: var(--sec-color);
-}
-
-.board {
-  fill: var(--pri-color);
-}
 
 @keyframes about-rotate {
   from {
@@ -596,18 +587,18 @@ header li {
   animation-timing-function: linear;
 }
 
-#tk-logo:hover {
+/* #logoanimation:hover {
   cursor: pointer;
   animation-duration: 1s;
   animation-name: logo-scale;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease-in;
-}
+} */
 
 .about-container__item p:hover,
 .s-skills table:hover,
-#tk-logo:hover {
+#logoanimation:hover {
   cursor: pointer;
   animation-duration: .5s;
   animation-name: item-scale;
