@@ -1,0 +1,660 @@
+/*  ELEMENTS ---------------------------------------------------------------------   ELEMENTS */
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* padding und border wird so in width und height einbezogen: */
+  padding: 0;
+  /* to center logo - another option?*/
+}
+
+body {
+  color: rgba(0, 0, 0, 0.75);
+  background-color: #fff;
+  /* padding: 20px; */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  /* height: auto; */
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: 'IM Fell DW Pica', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2;
+  color: #535cdf;
+}
+
+h2 {
+  font-family: 'IM Fell DW Pica', serif;
+  font-weight: 600;
+  font-size: 1.7rem;
+  line-height: 1.5;
+  color: #535cdf;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: undefined;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+/*  MAIN  ---------------------------------------------------------------------  MAIN */
+
+main {
+  padding: 20px;
+  margin: 0 0 20px 0;
+}
+
+main section {
+  text-align: center;
+}
+
+main a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #535cdf;
+  -webkit-transition: all, 1s ease;
+  -o-transition: all, 1s ease;
+  transition: all, 1s ease;
+}
+
+main a:visited {
+  color: #535cdf;
+  text-decoration: none;
+  font-size: 1rem;
+
+}
+
+main a:hover {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 18px;
+  text-decoration: none;
+}
+
+main a:active {
+  color: #535cdf;
+  text-decoration: none;
+}
+
+@media all and (max-width: 500px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: undefined;
+  }
+
+  h4 {
+    font-size: undefined;
+  }
+
+
+
+}
+
+/*  HOME  ---------------------------------------------------------------------  HOME */
+
+.profile {
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  /* top and bottom: 50px margin   */
+  /* Box is horizontally centered */
+}
+
+.profile_portrait {
+  float: none;
+  max-width: 22vw;
+  border-radius: 50%;
+}
+
+.profile:last-child {
+  line-height: 4;
+}
+
+/* CONTACT  ---------------------------------------------------------------------  CONTACT */
+
+.contact a {
+  line-height: 2;
+}
+
+.contact a:last-child {
+  line-height: 4;
+}
+
+/* >>>>  FORM  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.cf-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  place-items: center;
+  height: auto;
+  /* min-height: 100vh; */
+}
+
+form {
+  width: 40%;
+  line-height: 1.5;
+}
+
+#cform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+#cform input {
+  text-align: center;
+  margin-bottom: 2vh;
+}
+
+#cform textarea {
+  text-align: center;
+}
+
+#submit-button {
+  margin-top: 2rem;
+  background-color: #fff;
+  border: 2px solid #535cdf;
+  color: #535cdf;
+  font-family: 'Roboto', sans-serif;
+  padding: 8px 12px;
+  border-radius: 10px;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#submit-button:hover {
+  cursor: pointer;
+  border: 2px solid rgba(0, 0, 0, 0.75);
+  color: rgba(0, 0, 0, 0.75);
+  scale: 1.1;
+}
+
+#submit-button:active {
+  cursor: pointer;
+  border: 2px solid #535cdf;
+  color: #535cdf;
+  scale: 1.1;
+}
+
+/* WORK  ---------------------------------------------------------------------  WORK */
+.grid {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1vh;
+}
+
+.grid__item {
+  background-color: #faebd7;
+  padding-bottom: 2vh;
+  width: 100%;
+  margin: 0;
+}
+
+.work-heading {
+  grid-column: 1/-1;
+}
+
+.grid__item h1,
+.grid__item h2,
+.grid__item h3,
+.grid__item h4 {
+  margin: 1rem;
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 768px) {
+  .grid {
+    -ms-grid-columns: 1fr 1vh 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* ABOUT  ---------------------------------------------------------------------  ABOUT */
+.about-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  grid-gap: 1vh;
+  /* height: auto; */
+}
+
+#tk-logo {
+  -ms-grid-column-align: center;
+  justify-self: center;
+  height: 100%;
+}
+
+.about-container__item>* {
+  max-width: 768px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  margin: 1rem 0;
+}
+
+table {
+  text-align: center;
+  line-height: 1.5;
+  margin: 2vh 0;
+}
+
+th,
+td {
+  width: 150px;
+}
+
+.s-skills {
+  margin-bottom: 2vh;
+}
+
+@media all and (max-width: 768px) {
+  #tk-logo {
+    max-width: 300px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .about-container {
+
+    h1,
+    h2 {
+      font-size: 18px;
+    }
+  }
+
+  #tk-logo {
+    max-width: 200px;
+  }
+}
+
+
+/* HEADER  ---------------------------------------------------------------------  HEADER */
+header {
+  background-color: #faebd7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 1vh;
+  height: auto;
+  margin-bottom: 2vh;
+}
+
+.logo-tobi {
+  max-width: 12%;
+  border-radius: 50%;
+  margin-bottom: 1vh;
+}
+
+.nav-list {
+  margin-top: 0;
+}
+
+header li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 2vw;
+}
+
+.nav-list__item {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.75);
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.nav-list__item:hover {
+  color: #535cdf;
+  font-size: 18px;
+}
+
+.nav-list__item--active {
+  color: #535cdf;
+}
+
+/* FOOTER  ---------------------------------------------------------------------  FOOTER */
+
+.page-footer {
+  margin-top: 3vh;
+  padding: 1vh 0 2vh;
+  background-color: #faebd7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.social-media p {
+  margin-top: 0;
+  font-size: 14px;
+  margin-bottom: 1.5vh;
+}
+
+.social-media__item {
+  text-decoration: none;
+  text-align: center;
+  padding-right: 3vw;
+}
+
+.social-media__image {
+  width: 30px;
+  -webkit-transition: scale 1s ease;
+  -o-transition: scale 1s ease;
+  transition: scale 1s ease;
+}
+
+.social-media__image:hover {
+  scale: 1.7;
+}
+
+/* ABOUT - ANIMATION ---------------------------------------------------------------------  ABOUT - ANIMATION*/
+@-webkit-keyframes color-change-sun {
+  0% {
+    fill: yellow;
+  }
+
+  100% {
+    fill: red;
+  }
+}
+
+@keyframes color-change-sun {
+  0% {
+    fill: yellow;
+  }
+
+  100% {
+    fill: red;
+  }
+}
+
+@-webkit-keyframes color-change-water {
+  0% {
+    fill: rgb(155, 254, 254);
+  }
+
+  50% {
+    fill: aqua;
+  }
+
+  100% {
+    fill: rgb(0, 153, 255);
+  }
+}
+
+@keyframes color-change-water {
+  0% {
+    fill: rgb(155, 254, 254);
+  }
+
+  50% {
+    fill: aqua;
+  }
+
+  100% {
+    fill: rgb(0, 153, 255);
+  }
+}
+
+@-webkit-keyframes color-change-sand {
+  0% {
+    fill: gold;
+  }
+
+  50% {
+    fill: rgb(255, 255, 47);
+  }
+
+  100% {
+    fill: greenyellow;
+  }
+}
+
+@keyframes color-change-sand {
+  0% {
+    fill: gold;
+  }
+
+  50% {
+    fill: rgb(255, 255, 47);
+  }
+
+  100% {
+    fill: greenyellow;
+  }
+}
+
+.sun,
+.laptop {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-name: color-change-sun;
+  animation-name: color-change-sun;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.sky {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-name: color-change-water;
+  animation-name: color-change-water;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.sand,
+.bow {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-name: color-change-sand;
+  animation-name: color-change-sand;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.water {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-name: color-change-water;
+  animation-name: color-change-water;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.mountain {
+  fill: rgb(152, 144, 134);
+}
+
+.surfer {
+  fill: #faebd7;
+}
+
+.board {
+  fill: #535cdf;
+}
+
+@-webkit-keyframes about-rotate {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes about-rotate {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes item-scale {
+  from {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  to {
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+  }
+}
+
+@keyframes item-scale {
+  from {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  to {
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+  }
+}
+
+
+.about-container__item h1:hover,
+.about-container__item h2:hover {
+  cursor: pointer;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-name: about-rotate;
+  animation-name: about-rotate;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+#tk-logo:hover {
+  cursor: pointer;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-name: logo-scale;
+  animation-name: logo-scale;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.about-container__item p:hover,
+.s-skills table:hover,
+#tk-logo:hover {
+  cursor: pointer;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-name: item-scale;
+  animation-name: item-scale;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}

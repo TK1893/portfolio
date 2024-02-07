@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="shortcut icon" href="img/favicon_08.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css"
+        href="  https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barrio&family=IM+Fell+DW+Pica:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+
+<body>
+
+    <!-- Navbar -->
+    <header class=" page-header">
+        <img src="img/logo-tobias-kraft.svg" alt="logo" class="page-header__item logo-tobi">
+        <nav class="page-header__item main-nav">
+            <ul role="menubar" class="nav-list">
+                <li role="presentation"> <a class="nav-list__item" href="index.html">Home</a>
+                </li>
+                <li role="presentation"> <a class="nav-list__item" href="about.html">About</a>
+                </li>
+                <li role="presentation"> <a class="nav-list__item nav-list__item--active"
+                        href="contact.html">Contact</a>
+                </li>
+                <li role="presentation"> <a class="nav-list__item" href="work.html">Work</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <!-- 
+        <section class="contact">
+            <h1>Contact</h1>
+            <p>Tobias Kraft <br>
+                Heinersdorfer Str.35 <br>13086 Berlin <br>Germany </p>
+            <a href="tel:+4915142431101">Tel: +49 1514 2431101 </a><br>
+            <a href="mailto:tobiaskraft1@gmail.com">tobiaskraft1@gmail.com</a> <br>
+            <a href="mailto:tobiaskraft1@gmail.com">Contact me</a>
+        </section>
+ -->
+        <section class="cf-container">
+            <h1>Contact</h1>
+            <p>Tobias Kraft <br>
+                Heinersdorfer Str.35 <br>13086 Berlin <br>Germany </p>
+            <a href="tel:+4915142431101">Tel: +49 1514 2431101 </a>
+            <a href="mailto:tobiaskraft1@gmail.com">tobiaskraft1@gmail.com</a>
+            <a href="mailto:tobiaskraft1@gmail.com">Contact me</a>
+            <h2>Contact Form</h2>
+            <form action="http://www.wohinauimmer.com/" method="post" id="cform">
+
+                <label class="standard-label" for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" placeholder="Your name ...">
+
+                <label class="standard-label" for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" placeholder="Your last name ...">
+
+                <label class="standard-label" for="contact-email">Email: </label>
+                <input type="email" id="contact-email" placeholder="Your email ..." required>
+
+                <label class="standard-label" for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Email ..." maxlength="200" required></textarea>
+
+            </form>
+            <input type="submit" id="submit-button" form="cform" value="Submit" class="submit_button">
+        </section>
+
+    </main>
+
+    <footer class="page-footer">
+
+        <div class="social-media">
+            <p class="social-media__item">Find me on</p>
+            <a href="https://github.com/TK1893" class="social-media__item social-media__item-icon">
+                <img src="img/github_icon.svg" alt="github" class="social-media__image">
+            </a>
+            <a href="https://twitter.com/?lang=de" class="social-media__item">
+                <img src="img/twitter_icon.svg" alt="twitter" class="social-media__image">
+            </a>
+            <a href="https://www.linkedin.com/" class="social-media__item">
+                <img src="img/linkedin_icon.svg" alt="linkedin" class="social-media__image">
+            </a>
+        </div>
+
+    </footer>
+
+    <script src="js/tota11y.min.js"></script>
+</body>
+
+</html>
