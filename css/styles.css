@@ -346,20 +346,21 @@ form {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
+  align-items: center;
   grid-gap: 1vh;
-  /* height: auto; */
 }
 
-#tk-logo {
-  justify-self: center;
-  height: 100%;
-}
-
-.about-container__item>* {
+.about-container__item {
   max-width: 768px;
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: 1rem 0;
+}
+
+#logoanimation {
+  width: 200px;
+  padding: 0;
+}
+
+.about-container h1 {
+  margin: 0;
 }
 
 table {
