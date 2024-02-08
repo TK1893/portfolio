@@ -187,21 +187,28 @@ main a:active {
   justify-items: center;
   align-items: center;
   text-align: center;
-  grid-gap: 5vh;
+  grid-gap: 4vh;
   grid-row-start: 2;
 }
 
-.profile>* {
+.profile h1,
+.profile p,
+.profile a {
   margin: 0;
+}
+
+.profile p {
+  margin-top: 2vh;
+  line-height: 2;
 }
 
 .profile_portrait {
   width: 300px;
 }
 
-.profile a {
+/* .profile a {
   margin-top: 10px;
-}
+} */
 
 
 @media all and (max-width: 768px) {
