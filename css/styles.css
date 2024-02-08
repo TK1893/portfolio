@@ -174,13 +174,21 @@ main a:active {
 
 /*  HOME  ---------------------------------------------------------------------  HOME */
 
+#wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
 .profile {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
   text-align: center;
-  grid-gap: 20px;
+  grid-gap: 5vh;
+  grid-row-start: 2;
 }
 
 .profile>* {
@@ -188,7 +196,7 @@ main a:active {
 }
 
 .profile_portrait {
-  width: 12vw;
+  width: 300px;
 }
 
 .profile a {
@@ -196,9 +204,13 @@ main a:active {
 }
 
 
-@media all and (max-width: 748px) {
+@media all and (max-width: 768px) {
   .profile_portrait {
     width: 30vw;
+  }
+
+  #wrapper {
+    height: 75vh;
   }
 }
 
@@ -424,13 +436,6 @@ header {
   margin-bottom: 1vh;
 }
 
-@media all and (max-width: 500px) {
-  .logo-tobi {
-    width: 30vw;
-    margin-bottom: 1vh;
-  }
-}
-
 .nav-list {
   margin-top: 0;
 }
@@ -440,6 +445,7 @@ header li {
   display: inline-block;
   padding: 0 2vw;
 }
+
 
 .nav-list__item {
   text-decoration: none;
@@ -455,6 +461,18 @@ header li {
 .nav-list__item--active {
   color: var(--pri-color);
 }
+
+@media all and (max-width: 500px) {
+  .logo-tobi {
+    width: 30vw;
+    margin-bottom: 1vh;
+  }
+
+  .nav-list__item {
+    font-size: var(--f-size-smaller);
+  }
+}
+
 
 /* FOOTER  ---------------------------------------------------------------------  FOOTER */
 
@@ -502,7 +520,7 @@ header li {
 
 @keyframes color-change-water {
   0% {
-    fill: rgb(0, 191, 255);
+    fill: rgb(0, 255, 251);
   }
 
   50% {
@@ -514,30 +532,15 @@ header li {
   }
 }
 
-
-@keyframes color-change-schrift {
-  0% {
-    fill: var(--light-color);
-  }
-
-  50% {
-    fill: var(--sec-color);
-  }
-
-  100% {
-    fill: #535cdf;
-  }
-}
-
-
-.sun,
-.disc {
+.schrift,
+.sun {
   animation-duration: 2s;
   animation-name: color-change-sun;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: linear;
 }
+
 
 .water {
   animation-duration: 2s;
@@ -547,14 +550,6 @@ header li {
   animation-timing-function: linear;
 }
 
-.schrift,
-.disc {
-  animation-duration: 2s;
-  animation-name: color-change-schrift;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-}
 
 
 @keyframes about-rotate {
