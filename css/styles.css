@@ -1,15 +1,4 @@
-/* --color1: #6269E4;
-  --color2: #535cdf;
-  --color3: #5158E1;
-  --pri-color: #535cdf;
-  --sec-color: #faebd7;
-  --darker-color: rgba(0, 0, 0, 0.75);
-  --light-color: #fff;
-font-family: 'IM Fell DW Pica', serif;
-font-family: 'IM Fell English', serif;
-font-family: 'Mukta Vaani', sans-serif;
-font-family: 'Roboto', sans-serif;
-*/
+
 
 /*  VAIABLES ---------------------------------------------------------------------   VARIABLES */
 
@@ -24,24 +13,27 @@ font-family: 'Roboto', sans-serif;
   --pri-font: 'Roboto', sans-serif;
   --sec-font: 'IM Fell DW Pica', serif;
   --thi-font: "Barrio", system-ui;
+
+  /* >> Size */
   --f-size-normal: 1rem;
   --f-size-heading1: 2rem;
   --f-size-heading2: 1.7rem;
   --f-size-heading3: 1.5rem;
   --f-size-heading4: 1.2rem;
-
-  --f-size-smaller: .8rem;
+  --f-size-smaller: 0.8rem;
   --f-size-heading1-smaller: 1.5rem;
   --f-size-heading2-smaller: 1.3rem;
   --f-size-heading3: 1.1rem;
   --f-size-heading4: 1rem;
 
+  /* >> Weight */
   --f-weight-normal: 400;
   --f-weight-heading1: 700;
   --f-weight-heading2: 600;
   --f-weight-heading3: 500;
   --f-weight-heading3: 40;
 
+  /* >> Line height */
   --l-height-normal: 1.5;
   --l-height-heading1: 2;
   --l-height-higher: 1.7;
@@ -50,20 +42,19 @@ font-family: 'Roboto', sans-serif;
 /*  ELEMENTS ---------------------------------------------------------------------   ELEMENTS */
 
 * {
-  box-sizing: border-box;
   /* padding und border wird so in width und height einbezogen: */
+  box-sizing: border-box;
+
+  /* to center logo - another option? */
   padding: 0;
-  /* to center logo - another option?*/
 }
 
 body {
   color: var(--darker-color);
   background-color: var(--light-color);
-  /* padding: 20px; */
   font-family: var(--pri-font);
   font-weight: var(--f-weight-normal);
   font-size: var(--f-size-normal);
-  /* height: auto; */
 }
 
 p {
@@ -108,8 +99,8 @@ h4 {
 /*  MAIN  ---------------------------------------------------------------------  MAIN */
 
 main {
-  padding: 20px;
-  margin: 0 0 20px 0;
+  padding: 20px 15vw;
+  margin-bottom: 2vh;
 }
 
 main section {
@@ -127,7 +118,6 @@ main a:visited {
   color: var(--pri-color);
   text-decoration: none;
   font-size: var(--f-size-normal);
-
 }
 
 main a:hover {
@@ -142,7 +132,6 @@ main a:active {
 }
 
 @media all and (max-width: 768px) {
-
   p {
     font-size: var(--f-size-smaller);
   }
@@ -168,6 +157,10 @@ main a:active {
     font-size: var(--f-size-heading4-smaller);
   }
 
+  main {
+    padding: 10px 5vw;
+    margin-bottom: 0;
+  }
 }
 
 /*  HOME  ---------------------------------------------------------------------  HOME */
@@ -216,9 +209,16 @@ main a:active {
   #wrapper {
     height: 75vh;
   }
+
+  .page-header {
+    margin-bottom: 0;
+  }
+
+  .page-footer {
+    margin-top: 0;
+  }
 }
 
-*/
 /* CONTACT  ---------------------------------------------------------------------  CONTACT */
 
 .contact a {
@@ -238,6 +238,7 @@ main a:active {
   justify-items: center;
   height: auto;
   grid-gap: 20px;
+  padding-top: 3vh;
 }
 
 .cf-container h1,
@@ -250,7 +251,6 @@ main a:active {
   margin-top: 10px;
 }
 
-
 form {
   width: 40vw;
   line-height: 1.5;
@@ -260,7 +260,6 @@ form {
   display: flex;
   flex-direction: column;
 }
-
 
 @media all and (max-width: 500px) {
   form {
@@ -293,6 +292,7 @@ form {
   padding: 8px 12px;
   border-radius: 10px;
   transition: all 1s ease;
+  margin-bottom: 2vh;
 }
 
 #submit-button:hover {
@@ -367,11 +367,12 @@ form {
 }
 
 .about-container__item {
-  max-width: 75vw;
+  width: 50vw;
+  justify-self: center;
 }
 
 #logoanimation {
-  width: 200px;
+  width: 300px;
   padding: 0;
 }
 
@@ -396,7 +397,11 @@ td {
 
 @media all and (max-width: 768px) {
   #logoanimation {
-    max-width: 60vw;
+    max-width: 70vw;
+  }
+
+  .about-container__item {
+    width: 80vw;
   }
 
   th,
@@ -408,7 +413,6 @@ td {
 
 @media all and (max-width: 500px) {
   .about-container {
-
     h1,
     h2 {
       font-size: 18px;
@@ -419,9 +423,12 @@ td {
       font-size: 0.5rem;
       width: 30vw;
     }
+
+    .about-container__item {
+      width: 85vw;
+    }
   }
 }
-
 
 /* HEADER  ---------------------------------------------------------------------  HEADER */
 header {
@@ -430,7 +437,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: .5vh;
+  padding-top: 0.5vh;
   height: auto;
   margin-bottom: 1vh;
 }
@@ -450,11 +457,10 @@ header li {
   padding: 0 2vw;
 }
 
-
 .nav-list__item {
   text-decoration: none;
   color: var(--darker-color);
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .nav-list__item:hover {
@@ -477,12 +483,11 @@ header li {
   }
 }
 
-
 /* FOOTER  ---------------------------------------------------------------------  FOOTER */
 
 .page-footer {
-  margin-top: 3vh;
-  padding: 10px 10px 30px 10px;
+  margin-top: 1vh;
+  padding: 10px 10px 30px;
   background-color: var(--sec-color);
   display: flex;
   flex-direction: column;
@@ -499,7 +504,7 @@ header li {
 .social-media__item {
   text-decoration: none;
   text-align: center;
-  padding: 1vw 3vw 1vw 3vw;
+  padding: 1vw 3vw;
 }
 
 .social-media__image {
@@ -511,7 +516,14 @@ header li {
   scale: 1.7;
 }
 
-/* ABOUT - ANIMATION ---------------------------------------------------------------------  ABOUT - ANIMATION*/
+@media all and (max-width: 700px) {
+  .page-footer {
+    margin-top: 0;
+  }
+}
+
+/*    ABOUT - ANIMATION ---------------------------------------------------------------------  ABOUT - ANIMATION */
+
 @keyframes color-change-sun {
   0% {
     fill: yellow;
@@ -545,7 +557,6 @@ header li {
   animation-timing-function: linear;
 }
 
-
 .water {
   animation-duration: 2s;
   animation-name: color-change-water;
@@ -553,8 +564,6 @@ header li {
   animation-direction: alternate;
   animation-timing-function: linear;
 }
-
-
 
 @keyframes about-rotate {
   from {
@@ -576,11 +585,10 @@ header li {
   }
 }
 
-
 .about-container__item h1:hover,
 .about-container__item h2:hover {
   cursor: pointer;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-name: about-rotate;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -600,7 +608,7 @@ header li {
 .s-skills table:hover,
 #logoanimation:hover {
   cursor: pointer;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-name: item-scale;
   animation-iteration-count: infinite;
   animation-direction: alternate;
