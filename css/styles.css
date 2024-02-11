@@ -596,15 +596,6 @@ animation-direction: alternate;
 animation-timing-function: linear;
 }
 
-/* #logoanimation:hover {
-cursor: pointer;
-animation-duration: 1s;
-animation-name: logo-scale;
-animation-iteration-count: infinite;
-animation-direction: alternate;
-animation-timing-function: ease-in;
-} */
-
 .about-container__item p:hover,
 .s-skills table:hover,
 #logoanimation:hover {
