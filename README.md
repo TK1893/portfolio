@@ -54,9 +54,12 @@ This project is a responsive portfolio website designed to showcase my professio
   - **`Responsive Grid Layout`** - For organizing content dynamically across devices.
   - **`CSS Animations and Transitions`** - For interactive visual effects.
 
+- **`Normalize.css`** - To standardize CSS across different browsers.
+- **`Google Fonts`** - Custom fonts, including _Barrio_, _IM Fell DW Pica_, and _Roboto_, for visual consistency and appeal.
+- **`tota11y Accessibility Tool`** - Ensures the website meets accessibility standards and is usable for diverse audiences.
 - **`Git`** - Version control for tracking changes and collaborating on code.
 - **`GitHub`** - Code repository and project hosting.
-- **`GitHub Pages`** - used for project hosting
+- **`GitHub Pages`** - The website is hosted on GitHub Pages for easy deployment and accessibility.
 
 ---
 
